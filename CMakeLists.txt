@@ -33,7 +33,9 @@ endif()
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
 message("PROJECT_SOURCE_DIR: " ${OpenCV_DIR})
-find_package(OpenCV 2.4.11 QUIET)
+#find_package(OpenCV 2.4.11 QUIET) # mate
+set(OpenCV_DIR "/home/mate/src/opencv-3.4.5/local/share/OpenCV/") # add by mate
+find_package(OpenCV 3.4.5 QUIET) # add by mate
 if(NOT OpenCV_FOUND)
     message("OpenCV > 2.4.11 not found.")
     find_package(OpenCV 3.0 QUIET)
